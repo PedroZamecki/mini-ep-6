@@ -1,0 +1,8 @@
+# Criação de imagem docker
+docker image build . -t mini_ep_6:0.0.1
+
+# Criação de container docker
+docker container create -v "$(pwd)/pages":/usr/src/pages -p 80:80 --name MiniEP6 mini_ep_6:0.0.1
+
+# Push da imagem para o dockerhub
+docker push pedrozamecki/mini_ep_6:0.0.1
